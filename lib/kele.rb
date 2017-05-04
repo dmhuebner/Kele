@@ -10,7 +10,9 @@ class Kele
 		if response.success?
 			@auth_token = response
 		else
-			puts response.response
+			puts response.body, response.code, response.message
+			puts "\nINSPECT RESPONSE HEADERS:"
+			puts response.headers.inspect
 		end
 	end
 end
