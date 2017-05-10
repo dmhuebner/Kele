@@ -1,8 +1,10 @@
 require 'httparty'
 require 'json'
+require_relative 'roadmap'
 
 class Kele
 	include HTTParty
+	include Roadmap
 
 	attr_reader :auth_token
 
